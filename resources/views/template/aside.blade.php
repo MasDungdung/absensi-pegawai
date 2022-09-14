@@ -35,8 +35,7 @@
          <nav class="mt-2">
              <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                  data-accordion="false">
-                 <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
+                 @if (auth()->user()->level == "karyawan")
                  <li class="nav-item">
                      <a href="#" class="nav-link">
                          <i class="nav-icon fas fa-clock"></i>
@@ -60,6 +59,7 @@
                          </li>
                      </ul>
                  </li>
+                 @endif
                  <li class="nav-item">
                      <a href="#" class="nav-link">
                          <i class="nav-icon fas fa-file-alt"></i>
@@ -69,20 +69,29 @@
                          </p>
                      </a>
                      <ul class="nav nav-treeview">
-                         <li class="nav-item">
+                        @if (auth()->user()->level == "karyawan") 
+                        <li class="nav-item">
                              <a href="#" class="nav-link ">
                                  <i class="far fa-circle nav-icon"></i>
-                                 <p>Laporan Absen Masuk</p>
+                                 <p>Laporan Per Karyawan</p>
                              </a>
                          </li>
+                         @endif
+                         @if (auth()->user()->level == "admin")
                          <li class="nav-item">
                              <a href="#" class="nav-link">
                                  <i class="far fa-circle nav-icon"></i>
-                                 <p>Laporan Absen Pulang</p>
+                                 <p>Laporan Keseluruhan</p>
                              </a>
                          </li>
+                         @endif
                      </ul>
                  </li>
+                 <li class="nav-item">
+                     <a href="{{ route('logout') }}" class=" btn btn-danger nav-link">
+                         <i class="nav-icon fas fa-file-alt"></i>
+                         <p>Logout</p>
+                     </a>
              </ul>
          </nav>
          <!-- /.sidebar-menu -->
