@@ -106,6 +106,9 @@
                         </div>
                     </div>
                 </form>
+                <div class="card-footer text-center">
+                    <a href="{{ url('/registrasi') }}" class="text-center">Belum Punya Akun ? Daftar Disini</a>
+                </div>
             </div>
 
         </div>
