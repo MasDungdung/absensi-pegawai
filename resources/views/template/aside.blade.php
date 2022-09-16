@@ -46,13 +46,13 @@
                      </a>
                      <ul class="nav nav-treeview">
                          <li class="nav-item">
-                             <a href="/absensi-masuk" class="nav-link ">
+                             <a href="{{ route('absensi-masuk') }}" class="nav-link ">
                                  <i class="far fa-clock nav-icon"></i>
                                  <p>Absen Masuk</p>
                              </a>
                          </li>
                          <li class="nav-item">
-                             <a href="#" class="nav-link">
+                             <a href="{{ route('absensi-pulang') }}" class="nav-link">
                                  <i class="far fa-clock nav-icon"></i>
                                  <p>Absen Pulang</p>
                              </a>

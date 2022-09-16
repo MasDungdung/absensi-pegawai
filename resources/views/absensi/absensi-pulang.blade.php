@@ -28,7 +28,7 @@
                         <div class="col-sm-12">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item">Home</li>
-                                <li class="breadcrumb-item active">Absensi Masuk</li>
+                                <li class="breadcrumb-item active">Absensi pulang</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -42,10 +42,10 @@
                     <div class="card-header">
                         Jam Kantor
                     </div>
-                    <form action="{{ route('simpan-absensi-masuk') }}" method="POST">
+                    <form action="{{ route('simpan-absensi-pulang') }}" method="POST">
                         {{ csrf_field() }}
                         <div class="card-body">
-                            <div class="jam_analog_masuk" onload="setdate()">
+                            <div class="jam_analog_pulang" onload="setdate()">
                                 <div class="xxx">
                                     <div class="jarum jarum_detik"></div>
                                     <div class="jarum jarum_menit"></div>
@@ -84,7 +84,7 @@
                             <center>
                                 <p style="font-size: 40px; font-family: arial;" id="jam"></p>
                                 <div class="form-group">
-                                    <button class="btn btn-success" type="submit">Absen Masuk</button>
+                                    <button class="btn btn-danger" type="submit">Absen Pulang</button>
                                 </div>
                             </center>
                         </div>

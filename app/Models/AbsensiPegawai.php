@@ -15,8 +15,8 @@ class AbsensiPegawai extends Model
         'user_id',
         'tanggal',
         'jam_masuk',
-        'jam_keluar',
-        'jam_kerja'
+        'jam_pulang',
+        'jam_kerja',
     ];    
     
     public function user()    {

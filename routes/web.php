@@ -23,10 +23,8 @@ Route::group(['middleware'=>['auth','ceklevel:admin,karyawan']],function(){
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::post('/simpan-absensi-masuk',[AbsensiController::class,'store'])->name('simpan-absensi-masuk');
     Route::get('/absensi-masuk',[AbsensiController::class,'index'])->name('absensi-masuk');
+    Route::post('/simpan-absensi-masuk',[AbsensiController::class,'absen_masuk'])->name('simpan-absensi-masuk');
+    Route::get('/absensi-pulang',[AbsensiController::class,'pulang'])->name('absensi-pulang');
+    Route::post('/simpan-absensi-pulang',[AbsensiController::class,'absen_pulang'])->name('simpan-absensi-pulang');
 });
-
-// Route::group(['middleware'=>['auth','ceklevel:karyawan']],function(){ 
-//     Route::get('/absensi-masuk',[AbsensiController::class,'index'])->name('absensi-masuk'); 
-// });
